@@ -1,18 +1,27 @@
-Student_count = 11
-# first, we print the list of students
-puts("The students of Villains Academy")
-puts("-------------")
-puts("Dr. Hannibal Lecter")
-puts("Darth Vader")
-puts("Nurse Ratched")
-puts("Michael Corleone")
-puts("Alex DeLarge")
-puts("The Wicked Witch of the West")
-puts("Terminator")
-puts("Freddy Krueger")
-puts("The Joker")
-puts("Joffrey Baratheon")
-puts("Norman Bates")
+#let's put all students into an array
+students = [
+  {name: "Dr. Hannibal Lecter", cohort: :november},
+  {name: "Darth Vader", cohort: :november},
+  {name: "Nurse Ratched", cohort: :november},
+  {name: "Michael Corleone", cohort: :november},
+  {name: "Alex DeLarge", cohort: :november},
+  {name: "The Wicked Witch of the West", cohort: :november},
+  {name: "Terminator", cohort: :november},
+  {name: "Freddy Krueger", cohort: :november},
+  {name: "The Joker", cohort: :november},
+  {name: "Joffrey Baratheon", cohort: :november},
+  {name: "Norman Bates", cohort: :november}
+]
 
-puts "Overall, we have #{Student_count} great students"
+def print_header
+  puts "The students of Villains Academy"
+  puts "-------------"
+end
 
+#nothing happens until we call the methods
+
+def print(students)
+  students.each do |student|
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  end
+end
